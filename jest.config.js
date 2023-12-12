@@ -11,7 +11,8 @@ module.exports = {
 	setupFiles: [],
 	transformIgnorePatterns: [
 		'/node_modules/',
-		'/public/'
+		'/public/',
+		'/build/'
 	],
 	testPathIgnorePatterns: [
 		'__testUtils__'
