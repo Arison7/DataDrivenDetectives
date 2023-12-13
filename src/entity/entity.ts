@@ -6,23 +6,31 @@ export default abstract class Entity {
 	private _width: number;
 	private _height: number;
 
-	constructor(position: point2D, width: number, height: number) {
+	constructor(position: point2D) {
 		this._position = position;
-		this._width = width;
-		this._height = height;
 	}
-
-	public get position(): point2D {
+	
+	public get Position(): point2D {
 		return this._position;
 	}
 
-	public get width(): number {
+	public get Width(): number {
 		return this._width;
 	}
 
-	public get height(): number {
+	public set Width(value: number) {
+		this._width = value;
+	}
+
+	public get Height(): number {
 		return this._height;
 	}
+
+	public set Height(value: number) {
+		this._height = value;
+	}
+
+
 
 	public abstract processInput(): void;
 	public abstract update(elapsed: number): boolean;

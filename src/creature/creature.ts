@@ -7,4 +7,6 @@ export default abstract class Creature extends Renderable {
 	public get direction(): Directions {
 		return this._direction; 
 	}
+
+	
 }
