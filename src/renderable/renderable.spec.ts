@@ -3,7 +3,7 @@ import  point2D  from '../utils/point2D/point2D';
 
 class MockClass extends Renderable {
 	constructor() {
-		super(new point2D(0, 0));
+		super();
 	}
 	public processInput(): void {
 		throw new Error('Method not implemented.');

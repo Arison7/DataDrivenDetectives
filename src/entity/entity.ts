@@ -1,17 +1,18 @@
-import  point2D  from "../utils/point2D/point2D";
+import  point2D  from "../utils/point2D/point2D.js";
 
 
 export default abstract class Entity {
-	private _position: point2D;
+	protected _position: point2D;
 	private _width: number;
 	private _height: number;
 
-	constructor(position: point2D) {
-		this._position = position;
-	}
 	
 	public get Position(): point2D {
 		return this._position;
+	}
+
+	public set Position(value: point2D) {
+		this._position = value;
 	}
 
 	public get Width(): number {
@@ -34,7 +35,7 @@ export default abstract class Entity {
 
 	public abstract processInput(): void;
 	public abstract update(elapsed: number): boolean;
-	public abstract render(): void;
+	public abstract render(canvas : HTMLCanvasElement): void;
 
 
 
